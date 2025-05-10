@@ -1,0 +1,7 @@
+ssh-keygen -t rsa -b 2048
+ssh-keygen -t ecdsa -b 2048
+
+ssh -T git@github.com
+
+
+chmod 700 /home1/cobashco/repo
