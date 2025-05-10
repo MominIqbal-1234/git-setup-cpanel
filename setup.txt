@@ -4,4 +4,4 @@ ssh-keygen -t ecdsa -b 2048
 ssh -T git@github.com
 
 
-chmod 700 /home1/cobashco/repo
+chmod 755 /home1/username/myrepo
