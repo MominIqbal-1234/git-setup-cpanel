@@ -5,3 +5,25 @@ ssh -T git@github.com
 
 
 chmod 755 /home1/username/myrepo
+
+
+nano ~/.ssh/config
+
+
+# For GitHub Account 1
+Host github.com-account1
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ecdsa
+
+# For GitHub Account 2
+Host github.com-account2
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/2id_ecdsa
+
+
+ssh -T git@github.com-account1
+
+
+git clone git@github.com-account1:username/repository.git
