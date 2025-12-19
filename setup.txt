@@ -23,6 +23,25 @@ Host github.com-account2
   IdentityFile ~/.ssh/2id_ecdsa
 
 
+# some set the permision of ssh folder 
+# 1) Ensure you own everything in ~/.ssh
+chown -R myuser:myuser /home/myuser/.ssh
+
+# 2) Fix folder perms
+chmod 700 /home/myuser/.ssh
+
+# 3) Fix config + private keys perms
+chmod 600 /home/myuser/.ssh/config
+chmod 600 /home/myuser/.ssh/mykey
+chmod 600 /home/myuser/.ssh/mykey 2>/dev/null
+
+# 4) Public keys + known_hosts are okay readable
+chmod 644 /home/myuser/.ssh/mykey.pub
+chmod 644 /home/myuser/.ssh/mykey.pub 2>/dev/null
+chmod 644 /home/myuser/.ssh/known_hosts 2>/dev/null
+
+
+
 ssh -T git@github.com-account1
 
 
